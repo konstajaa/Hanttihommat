@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<link href="grafiks.css" type="text/css" rel="stylesheet" />
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<title>Hanttihommat - Rekisteröinti</title>
+</head>
+
+<body>
+	
+	<div class="eka">
+		<fieldset>
+			<a href="projekt.html">
+            <button id="Etusivu" >Etusivu</button>
+            </a>
+			<a href="note.html">
+            <button id="ilmoitukset">Ilmoitukset</button>
+            </a>
+			<button id="login" onclick="document.getElementById('id01').style.display='block'">Kirjaudu sisään</button>
+			<a href="logout.php">
+            <button id="logout" style="display: none">Kirjaudu ulos</button>
+            </a>
+		</fieldset>
+	</div>
+	<div class="regmodal">
+	<form id="regForm" lang="fi" action="PHP/testphp.php" onsubmit="return register();" method="post">
+		<fieldset class=reg>
+			<label for="firstname">Etunimi:</label><br>
+			<input id="firstname" type="text" name="firstname" required="" placeholder="Etunimi" oninvalid="this.setCustomValidity('Please Enter your name')" oninput="setCustomValidity('')"></input><br>
+
+			<label for="lastname">Sukunimi:</label><br>
+			<input id="lastname" type="text" name="lastname" required="" placeholder="Sukunimi" oninvalid="this.setCustomValidity('Please Enter your name')" oninput="setCustomValidity('')">
+			</input><br>
+
+			<label for="email">Email:</label><br>
+			<input id="regEmail" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required="" placeholder="erkki@esimerkki.com" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+			</input><br>
+
+			<label for="pwd">Salasana:</label><br>
+			<input id="regPwd" type="password" name="pwd" required="" placeholder="Salasana" oninvalid="this.setCustomValidity('Please Enter your password')" oninput="setCustomValidity('')"></input>
+			<br>
+
+			<input type="submit" name="Register" value="Register" />
+		</fieldset>
+	</form>
+	<script src="register.js"></script>
+
+	<!-- The Modal -->
+	<div id="id01" class="modal">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+		<!-- Modal Content -->
+		<fieldset class="log">
+			<form id="LoginForm" action="PHP/hantti.php" onsubmit="return login();" method="post" class="modal-content animate">
+
+				<div>
+					<label><b>Sähköposti</b></label><br>
+					<input id="email" type="text" placeholder="Sähköposti" name="email">
+				</div>
+				<div>
+					<label><b>Salasana</b></label><br>
+					<input id="pwd" type="password" size="15" placeholder="Salasana" name="pwd">
+				</div>
+				<div>
+					<input type="submit" value="Kirjaudu" id="loginBtn"><br>
+					<span>Unohditko <a href="https://www.google.fi/search?source=hp&ei=h3wuWonbNOnw6ATswaOQCw&q=forgot+password&oq=forgot+password&gs_l=psy-ab.3..0l10.1431.7758.0.8590.15.10.0.5.5.0.55.444.10.10.0....0...1c.1.64.psy-ab..0.15.456...0i131k1.0.lj5MwtrsRWg">salasanasi?</a></span>
+				</div>
+			</form>
+		</fieldset>
+	</div>
+	</div>
+
+	<script src="/PROJEKTI/skripti.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,694 @@
+body {
+    background: url(/PROJEKTI/backg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.eka {
+    background-color: black;
+    opacity: .7;
+    margin: auto;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 12%;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    position: fixed;
+    margin-top: -20px;
+    z-index: 99;
+    margin-bottom: 10px;
+
+
+}
+
+.log {
+    position: absolute;
+    top: 24%;
+    left: 22%;
+    z-index: 1000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 400px;
+    height: 400px;
+}
+
+#LoginForm {
+    position: relative;
+    background-color: grey;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+
+}
+
+#email,
+#pwd {
+
+
+    width: 150px;
+    margin: auto;
+    padding: 2px;
+    text-align: left;
+
+}
+
+#loginBtn {
+    width: 150px;
+    margin: auto;
+    padding: 2px;
+    margin-top: 4px;
+    margin-top: 4px;
+}
+
+
+
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    border-radius: 10px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 39%;
+    /* Full width */
+    height: 60%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+    text-decoration: none;
+}
+
+.addmodal {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    text-decoration: none;
+    margin-top: 5%;
+}
+.regmodal {
+    display: block;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 0;
+    /* Sit on top */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Black w/ opacity */
+    text-decoration: none;
+}
+
+
+
+
+
+.modal-content {
+    background-color: #4CAF50;
+    border-radius: 20px;
+    margin: 5px auto;
+    /* 15% from the top and centered */
+    width: 100%;
+    /* Could be more or less, depending on screen size */
+    text-decoration: none;
+}
+
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+p1 {
+    font-size: 8px;
+}
+
+label {
+
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+
+}
+
+.reg {
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 10%;
+    color: black;
+    width: 30%;
+    height: 35%;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    background: repeating-linear-gradient( 45deg,
+    transparent,
+    transparent,
+    #ccc 10px,
+    #ccc 20px),
+    linear-gradient( to bottom,
+    #eee,
+    #777)
+}
+
+
+
+#login,
+#logout,
+#other,
+#register,
+#profiili,
+#Etusivu,
+#ilmoitukset {
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+}
+
+h1,
+h2 {
+    font-family: arial, sans-serif;
+}
+
+#addbtn {
+    font-family: Verdana, Geneva, sans-serif;
+    border: ridge;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 2px groove white;
+    background: rgb(204, 204, 204);
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.4);
+}
+
+#editbtn {
+    font-family: Verdana, Geneva, sans-serif;
+    border: ridge;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 2px groove white;
+    background: rgb(204, 204, 204);
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.4);
+}
+
+.napit {
+    margin-left: 18%;
+}
+
+#editprofile {
+
+    margin-left: 63%;
+    margin-top: 5%;
+    font-family: Verdana, Geneva, sans-serif;
+    border: ridge;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 2px groove white;
+    background: rgb(204, 204, 204);
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.4);
+
+}
+
+#list {
+    font-family: arial, sans-serif;
+    border: groove;
+    color: black;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 600px;
+    text-align: center;
+
+}
+
+.addclass {
+    position: absolute;
+    width: 600px;
+    height: 650px;
+    border-radius: 20px;
+    border: 1px solid green;
+    margin: 0 auto;
+    top: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background: repeating-linear-gradient( 45deg,
+    transparent,
+    transparent 10px,
+    #ccc 10px,
+    #ccc 20px),
+    linear-gradient( to bottom,
+    #eee,
+    #999)
+}
+
+.editclass {
+    position: fixed;
+    width: 600px;
+    height: 700px;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 1px solid green;
+    top: 11%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background: repeating-linear-gradient( 45deg,
+    transparent,
+    transparent 10px,
+    #ccc 10px,
+    #ccc 20px),
+    linear-gradient( to bottom,
+    #eee,
+    #999)
+}
+
+
+textarea {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    padding: 0.5em;
+    font-family: arial, sans-serif;
+}
+
+#addhead {
+    display: inline-block;
+    width: 500px;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: arial, sans-serif;
+}
+
+#addloc {
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+
+}
+
+#addsijainti {
+    background: rgb(204, 204, 204);
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.9);
+    width: 50px;
+    margin-left: 100px;
+}
+
+#r1,
+#r2 {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.profilediv {
+    margin-left: 20%;
+    margin-right: 10%;
+    width: 600px;
+    border-radius: 15px;
+    border: 2px groove white;
+    background: rgb(204, 204, 204);
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.4);
+    padding: 1em;
+
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    min-height: 600px;
+
+
+}
+
+#tahdet {
+    position: relative;
+    margin-left: 250px;
+    width: 250px;
+    height: 50px;
+
+}
+
+#lname,
+#fname {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    width: 300px;
+    word-wrap: break-word;
+    color: black;
+
+
+}
+
+#Description {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    width: 400px;
+    word-wrap: break-word;
+    color: black;
+
+}
+
+/*profiilin muokkkaus*/
+
+#editdesc {
+    height: 300px;
+    padding: 1em;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: arial, sans-serif;
+    word-wrap: break-word;
+}
+
+.editform {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    color: white;
+    background-color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#editform,#editform.p{
+    text-align:left;
+    font-size: 20px;
+    
+}
+
+.profilemodal {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    text-decoration: none;
+    margin-top: 4.5%;
+
+}
+
+/*Etusivun ilmotuslaatikot*/
+
+.container-fluid {
+    padding: 20px 20px;
+
+}
+
+.thumbnail img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+.checked {
+    color: orange;
+}
+
+div.transbox3 {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    opacity: 0.7;
+    padding: 1em;
+    margin-bottom: 20px;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+}
+
+div.transbox {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    opacity: 0.7;
+    padding: 1em;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+}
+
+
+div.transbox2 {
+
+    height: 250px;
+    width: 80%;
+
+    margin: 20px;
+    margin-left: 10%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    opacity: 0.7;
+    padding: 1em;
+    margin-bottom: 20px;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 4%;
+    font-weight: bold;
+    color: black;
+}
+
+.search {
+    margin-top: 5%;
+    margin-left: 2%;
+
+}
+
+#search {
+    margin-left: 1%;
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("/PROJEKTI/IMG/search.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search:focus {
+    width: 100%;
+
+
+}
+
+#otsikot {
+    margin-left: 3%;
+}
+
+.column {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-top: 9%;
+    padding: 1em;
+    border-left: .5px solid;
+    border-right: .5px solid;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.etusivu {
+    font-style: oblique;
+    font-size: larger;
+
+
+}
+
+
+
+#pointer {
+    cursor: pointer;
+}
+
+
+
+i {
+    font-size: 10px;
+
+}
+
+.jokudiv {
+    width: 400px;
+    height: 100px;
+}
+
+#mainselection select {
+    border: 0;
+    color: #EEE;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    width: 350px;
+    *background: #58B14C;
+    -webkit-appearance: none;
+}
+
+#mainselection {
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px #330033;
+    background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+select.soflow,
+select.soflow-color {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+
+.kuva {
+    width: 100px;
+    height: 100px;
+}

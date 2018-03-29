@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <link href="grafiks.css" type="text/css" rel="stylesheet" />
+  <title>Hanttihommat - Ilmoitukset</title>
+</head>
+
+<body>
+  <div class="eka">
+
+    <fieldset>
+      <a href="projekt.html">
+      <button id="Etusivu" >Etusivu</button>
+      </a>
+      <button id="login" onclick="document.getElementById('id01').style.display='block'">Kirjaudu sisään</button>
+      <a href=" register.html">
+      <button id="register">Rekisteröidy</button>
+      </a>
+      <a href="profile.html">
+      <button id="profiili" style="display: none">Profiili</button>
+      </a>
+      <a href="logout.php">
+      <button id="logout" style="display: none">Kirjaudu ulos</button>
+      </a>
+    </fieldset>
+  </div>
+
+  <!-- The Modal -->
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <fieldset class="log">
+      <form id="LoginForm" action="PHP/hantti.php" onsubmit="return login();" method="post" class="modal-content animate">
+
+        <div>
+          <label><b>Sähköposti</b></label><br>
+          <input id="email" type="text" placeholder="Sähköposti" name="email">
+        </div>
+        <div>
+          <label><b>Salasana</b></label><br>
+          <input id="pwd" type="password" size="15" placeholder="Salasana" name="pwd">
+        </div>
+        <div>
+          <input type="submit" value="Kirjaudu" id="loginBtn"><br>
+          <span>Unohditko <a href="https://www.google.fi/search?source=hp&ei=h3wuWonbNOnw6ATswaOQCw&q=forgot+password&oq=forgot+password&gs_l=psy-ab.3..0l10.1431.7758.0.8590.15.10.0.5.5.0.55.444.10.10.0....0...1c.1.64.psy-ab..0.15.456...0i131k1.0.lj5MwtrsRWg">salasanasi?</a></span>
+        </div>
+      </form>
+    </fieldset>
+  </div>
+
+  <div class="row">
+    <div class="container-fluid text-left bg-grey">
+      <div class="column">
+        <h4>Työntekijät
+          <form id="haku" class="search">
+            <input id="search" type="text" onkeyup="getTekija(this.value)" name="search" placeholder="Hae työtehtävää..">
+          </form>
+        </h4>
+        <div class="">
+          <div class="thumbnail">
+            <div id="ad">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4>Työnantajat</h4>
+        <form id="haku" class="search">
+          <input id="search" type="text" onkeyup="getAntaja(this.value)" name="search" placeholder="Hae työtehtävää..">
+        </form>
+        <div id "top" class="">
+          <div id="adWork"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/PROJEKTI/Note.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <link href="grafiks.css" type="text/css" rel="stylesheet" />
+  <title>Hanttihommat - Profiili</title>
+</head>
+
+<body>
+
+
+  <div class="eka">
+    <fieldset>
+      <a href="projekt.html">
+             <button id="Etusivu" >Etusivu</button>
+              </a>
+      <a href="note.html">
+              <button id="ilmoitukset">Ilmoitukset</button>
+              </a>
+      <a href="logout.php">
+              <button id="logout" onclick="href=logout.php" >Kirjaudu ulos</button>
+              </a>
+    </fieldset>
+
+
+  </div>
+
+  <!-- edit -->
+  <div id="id2" class="addmodal">
+    <span onclick="document.getElementById('id2').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+
+    <div class="editclass">
+      <h2 style="color:black">Ilmoituksen muokkaus</h2>
+
+      <select id="edithead" onclick="showJob(this.value)" class="soflow"> </select>
+      <p style="color:black">Sijanti:</p>
+      <select id="editloc" class="soflow">
+			 <option value=Helsinki>Helsinki</option>
+			 <option value=Espoo>Espoo</option>
+			 <option value=Vantaa>Vantaa</option>
+		</select>
+      <textarea id="note" placeholder=""></textarea>
+
+      <div style="color:black;" class="w3-padding w3-jumbo">
+        <i id = 'delbtn' style="margin-right: 40px;" class="fa fa-trash"></i>
+        <i id="muokkaus" class="fa fa-arrow-right"></i>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- add  -->
+  <div id="id02" class="addmodal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+
+    <div class="addclass">
+      <h2>Lisää ilmoitus</h2>
+      <div>
+        <input type="radio" name="asema" value="0" id="r1" checked /> Työntekijä
+        <input type="radio" name="asema" value="1" id="r2" /> Työnantaja
+      </div>
+
+      <input id="addhead" type="text" placeholder="Työnimike" autofocus/>
+      <p>Sijanti:</p>
+      <select id="addloc" class="soflow">
+			  <option value=Helsinki>Helsinki</option>
+			  <option value=Espoo>Espoo</option>
+			  <option value=Vantaa>Vantaa</option>
+			</select></p>
+      <textarea id="addnote" placeholder="Kuvaus"></textarea>
+      <p><button id="notebtn">Lisää ilmoitus</button></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- edit profile -->
+  <div id="id04" class="profilemodal">
+    <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <div class="editform">
+      <h2 style="color:black">Muokkaa profiilitietoja</h2>
+      <form id="editform" action="PHP/profileup.php" onsubmit="return EditProfile();" method="post">
+        <p>Etunimi:</p>
+        <input id="editfname" type="textarea" placeholder="" autofocus /></p>
+        <p>Sukunimi</p>
+        <input id="editlname" type="textarea" placeholder="" />
+        <p>Email:</p>
+        <input id="editemail" type="textarea" placeholder="" />
+        <p>Salasana:</p>
+        <input id="editpwd" type="password" placeholder="" />
+        <p><label></p>
+        <b>Kuvaus</b></p><p1>max 500 merkkiä</p1></label>
+        <textarea id="editdesc"></textarea>
+
+        <input id="verifyedit" type="submit" value="Vahvista muokkaus" />
+      </form>
+    </div>
+  </div>
+  <div class="column">
+
+    <div class="napit">
+      <button id="addbtn" onclick="document.getElementById('id02').style.display='block'">Lisää ilmoitus</button>
+      <button id="editbtn" onclick="document.getElementById('id2').style.display='block'">Muokkaa ilmoitusta</button>
+    </div>
+
+    <div class="row text-center">
+
+      <div class="container-fluid text-left bg-grey">
+        <div class="col-sm2-2">
+          <div id="ad">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <button id="editprofile" onclick="document.getElementById('id04').style.display='block'">Muokkaa profiilia</button>
+    <div id="profile" class='profilediv'>
+
+      <fieldset class="prof">
+
+
+        <h2>Profiili:
+          <span style="margin-left:220px;" id="star1" class="fa fa-star"></span>
+          <span id="star2" class="fa fa-star"></span>
+          <span id="star3" class="fa fa-star"></span>
+          <span id="star4" class="fa fa-star"></span>
+          <span id="star5" class="fa fa-star"></span>
+          <p id="votes" type="num" style="margin-left:350px; font-size: 20px;"></p>
+        </h2>
+
+
+
+        <label>Nimi:</label>
+        <p>
+          <p id="lname" type="text"></p>
+        </p>
+        <label>Kuvaus:</label>
+        <div id="Description" type="text"></div><br><br><br><br><br><br><br>
+         <label for="email">Ota Yhteyttä:</label><br>
+         <a id="email" href =""></a>
+      </fieldset>
+
+    </div>
+  </div>
+
+  <script src="/PROJEKTI/profile.js"></script>
+</body>
+
+</html>
